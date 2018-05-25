@@ -10,8 +10,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.NavOptions
 import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import com.github.droibit.hello.androidjetpack.R
-import com.github.droibit.hello.androidjetpack.ui.step.FlowStepFragmentArgs
 import kotlinx.android.synthetic.main.main_fragment.navToDestButton
 import kotlinx.android.synthetic.main.main_fragment.navToDestWithActionButton
 import kotlinx.android.synthetic.main.main_fragment.navToDestWithSafeArgsButton
@@ -50,7 +50,8 @@ class MainFragment : Fragment() {
         .setPopExitAnim(R.anim.slide_out_right)
         .build()
     navToDestButton.setOnClickListener {
-      Navigation.findNavController(it).navigate(R.id.flow_step_1, null, options)
+      it.findNavController()
+          .navigate(R.id.flow_step_1, null, options)
     }
 
     navToDestWithActionButton.setOnClickListener(
@@ -58,10 +59,16 @@ class MainFragment : Fragment() {
     )
 
     navToDestWithSafeArgsButton.setOnClickListener {
-      val args = FlowStepFragmentArgs.Builder()
-          .setStep(1)
-          .build()
-      Navigation.findNavController(it).navigate(R.id.flow_step_1, args.toBundle(), options)
+      val directions = MainFragmentDirections.next_action()
+          .apply {
+            setStep(1)
+          }
+      it.findNavController()
+          .navigate(directions, options)
+//      val args = FlowStepFragmentArgs.Builder()
+//          .setStep(1)
+//          .build()
+//      it.findNavController().navigate(R.id.flow_step_1, args.toBundle(), options)
     }
   }
 

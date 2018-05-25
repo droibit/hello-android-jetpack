@@ -5,7 +5,8 @@ import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment.findNavController
-import androidx.navigation.ui.NavigationUI
+import androidx.navigation.ui.onNavDestinationSelected
+import androidx.navigation.ui.setupWithNavController
 import kotlinx.android.synthetic.main.main_activity.bottomNavView
 import kotlinx.android.synthetic.main.main_activity.navHostFragment
 import kotlinx.android.synthetic.main.main_activity.toolbar
@@ -22,13 +23,13 @@ class MainActivity : AppCompatActivity() {
 
     setSupportActionBar(toolbar)
 
-    NavigationUI.setupWithNavController(bottomNavView, navController)
+    bottomNavView.setupWithNavController(navController)
   }
 
   override fun onSupportNavigateUp() = navController.navigateUp()
 
   override fun onOptionsItemSelected(item: MenuItem): Boolean {
-    return NavigationUI.onNavDestinationSelected(item, navController) ||
-      super.onOptionsItemSelected(item)
+    return item.onNavDestinationSelected(navController) ||
+        super.onOptionsItemSelected(item)
   }
 }
