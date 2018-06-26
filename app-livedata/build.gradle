@@ -36,6 +36,10 @@ dependencies {
   implementation deps.androidx.lifecycle.viewModel.ktx
   implementation deps.androidx.preference.ktx
 
+  implementation deps.rx.java
+  implementation deps.rx.kotlin
+  implementation deps.rx.android
+
   testImplementation 'junit:junit:4.12'
   androidTestImplementation 'androidx.test:runner:1.1.0-alpha3'
   androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha3'
