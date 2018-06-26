@@ -1,0 +1,107 @@
+ext {
+  versions = [
+      supportLibrary: '27.1.1',
+      arch          : [
+          core     : '1.1.1',
+          lifecycle: '1.1.1'
+      ],
+      dagger        : '2.16',
+      kotlin        : '1.2.50'
+  ]
+  deps = [
+      plugin     : [
+          buildTools        : 'com.android.tools.build:gradle:3.2.0-beta01',
+          navigationSafeArgs: 'android.arch.navigation:navigation-safe-args-gradle-plugin:1.0.0-alpha02',
+          kotlin            : "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}",
+          gradleVersions    : 'com.github.ben-manes:gradle-versions-plugin:0.17.0'
+      ],
+      kotlin     : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin}",
+      android    : [
+          arch   : [
+              lifecycle : [
+                  extensions     : "android.arch.lifecycle:extensions:${versions.arch.lifecycle}",
+                  compiler       : "android.arch.lifecycle:compiler:${versions.arch.lifecycle}",
+                  reactiveStreams: "android.arch.lifecycle:reactivestreams:${versions.arch.lifecycle}"
+              ],
+              core      : [
+                  testing: "android.arch.core:core-testing:${versions.arch.core}"
+              ],
+              navigation: [
+                  ui      : [
+                      ktx: "android.arch.navigation:navigation-ui-ktx:1.0.0-alpha02"
+                  ],
+                  fragment: [
+                      ktx: "android.arch.navigation:navigation-fragment-ktx:1.0.0-alpha02"
+                  ],
+              ]
+          ],
+          support: [
+              annotations     : "com.android.support:support-annotations:${versions.supportLibrary}",
+              v4              : "com.android.support:support-v4:${versions.supportLibrary}",
+              appcompat       : "com.android.support:appcompat-v7:${versions.supportLibrary}",
+              design          : "com.android.support:design:${versions.supportLibrary}",
+              constraintLayout: "com.android.support.constraint:constraint-layout:1.1.2",
+              recyclerView    : "com.android.support:recyclerview-v7:${versions.supportLibrary}",
+              cardView        : "com.android.support:cardview-v7:${versions.supportLibrary}"
+          ],
+          ktx    : "androidx.core:core-ktx:0.3",
+      ],
+      androidx   : [
+          appcompat          : 'androidx.collection:collection-ktx:1.0.0-alpha3',
+          constraintLayout   : 'androidx.constraintlayout:constraintlayout:1.1.2',
+          collection         : [
+              ktx: 'androidx.collection:collection-ktx:1.0.0-alpha3'
+          ],
+          core: [
+              ktx: 'androidx.core:core-ktx:1.0.0-alpha3'
+          ],
+          fragment: [
+              ktx: 'androidx.fragment:fragment-ktx:1.0.0-alpha3'
+          ],
+          lifecycle: [
+              reactivestreams: [
+                  ktx: 'androidx.lifecycle:lifecycle-reactivestreams-ktx:2.0.0-alpha1'
+              ],
+              viewModel: [
+                  ktx: 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.0.0-alpha1'
+              ],
+              extensions: 'androidx.lifecycle:lifecycle-extensions:2.0.0-alpha1',
+              compiler: 'androidx.lifecycle:lifecycle-compiler:2.0.0-alpha1'
+          ],
+          palette: [
+              ktx: 'androidx.palette:palette-ktx:1.0.0-alpha3'
+          ],
+          preference: [
+              ktx: 'androidx.preference:preference-ktx:1.0.0-alpha3'
+          ],
+          slice: [
+              builders: [
+                  ktx: 'androidx.slice:slice-builders-ktx:1.0.0-alpha3'
+              ]
+          ],
+          sqlite: [
+              ktx: 'androidx.sqlite:sqlite-ktx:2.0.0-alpha1'
+          ],
+          versionedparcelable: 'androidx.versionedparcelable:versionedparcelable:1.0.0-alpha3'
+      ],
+      dagger     : [
+          runtime         : "com.google.dagger:dagger:${versions.dagger}",
+          compiler        : "com.google.dagger:dagger-compiler:${versions.dagger}",
+          androidSupport  : "com.google.dagger:dagger-android-support:${versions.dagger}",
+          androidProcessor: "com.google.dagger:dagger-android-processor:${versions.dagger}"
+      ],
+      javax      : [
+          inject: 'javax.inject:javax.inject:1'
+      ],
+      rx         : [
+          java  : "io.reactivex.rxjava2:rxjava:2.1.15",
+          kotlin: "io.reactivex.rxjava2:rxkotlin:2.2.0"
+      ],
+      timber     : 'com.jakewharton.timber:timber:4.7.0',
+
+      junit      : 'junit:junit:4.12',
+      robolectric: 'org.robolectric:robolectric:3.8',
+      assertj    : 'org.assertj:assertj-core:3.9.1',
+      mockito    : 'org.mockito:mockito-core:2.18.3'
+  ]
+}

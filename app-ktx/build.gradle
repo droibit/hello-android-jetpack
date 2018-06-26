@@ -24,22 +24,22 @@ android {
 
 dependencies {
   implementation fileTree(dir: 'libs', include: ['*.jar'])
-  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
-  implementation 'androidx.appcompat:appcompat:1.0.0-alpha3'
-  implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
+  implementation deps.kotlin
+  implementation deps.androidx.appcompat
+  implementation deps.androidx.constraintLayout
 
-  implementation 'androidx.versionedparcelable:versionedparcelable:1.0.0-alpha3'
+  implementation deps.androidx.versionedparcelable
 
   // ktx
-  implementation 'androidx.collection:collection-ktx:1.0.0-alpha3'
-  implementation 'androidx.core:core-ktx:1.0.0-alpha3'
-  implementation 'androidx.fragment:fragment-ktx:1.0.0-alpha3'
-  implementation 'androidx.lifecycle:lifecycle-reactivestreams-ktx:2.0.0-alpha1'
-  implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.0.0-alpha1'
-  implementation 'androidx.palette:palette-ktx:1.0.0-alpha3'
-  implementation 'androidx.preference:preference-ktx:1.0.0-alpha3'
-  implementation 'androidx.slice:slice-builders-ktx:1.0.0-alpha3'
-  implementation 'androidx.sqlite:sqlite-ktx:2.0.0-alpha1'
+  implementation deps.androidx.collection.ktx
+  implementation deps.androidx.core.ktx
+  implementation deps.androidx.fragment.ktx
+  implementation deps.androidx.lifecycle.reactivestreams.ktx
+  implementation deps.androidx.lifecycle.viewModel.ktx
+  implementation deps.androidx.palette.ktx
+  implementation deps.androidx.preference.ktx
+  implementation deps.androidx.slice.builders.ktx
+  implementation deps.androidx.sqlite.ktx
 
   testImplementation 'junit:junit:4.12'
   androidTestImplementation 'androidx.test:runner:1.1.0-alpha3'
