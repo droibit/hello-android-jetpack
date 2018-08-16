@@ -59,7 +59,7 @@ class MainFragment : Fragment() {
     )
 
     navToDestWithSafeArgsButton.setOnClickListener {
-      val directions = MainFragmentDirections.next_action()
+      val directions = MainFragmentDirections.nextAction()
           .apply {
             setStep(1)
           }

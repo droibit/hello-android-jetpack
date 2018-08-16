@@ -25,7 +25,7 @@
     <argument
         android:name="step"
         android:defaultValue="1"
-        app:type="integer"/>
+        app:argType="integer"/>
     <action
         android:id="@+id/next_action"
         app:destination="@id/flow_step_2"
@@ -42,7 +42,7 @@
     <argument
         android:name="step"
         android:defaultValue="2"
-        app:type="integer"/>
+        app:argType="integer"/>
     <action
         android:id="@+id/next_action"
         app:destination="@+id/launcher_home"
