@@ -10,7 +10,7 @@ ext {
   ]
   deps = [
       plugin     : [
-          buildTools        : 'com.android.tools.build:gradle:3.2.0-beta05',
+          buildTools        : 'com.android.tools.build:gradle:3.2.0-rc02',
           navigationSafeArgs: 'android.arch.navigation:navigation-safe-args-gradle-plugin:1.0.0-alpha05',
           kotlin            : "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}",
           gradleVersions    : 'com.github.ben-manes:gradle-versions-plugin:0.17.0'
