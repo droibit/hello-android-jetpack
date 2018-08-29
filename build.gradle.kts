@@ -1,16 +1,14 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-  apply from: rootProject.file('dependencies.gradle')
-
   repositories {
     google()
     jcenter()
   }
   dependencies {
-    classpath deps.plugin.buildTools
-    classpath deps.plugin.navigationSafeArgs
-    classpath deps.plugin.kotlin
+    classpath(Deps.Plugin.buildTools)
+    classpath(Deps.Plugin.navigationSafeArgs)
+    classpath(Deps.Plugin.kotlin)
   }
 }
 
@@ -21,6 +19,6 @@ allprojects {
   }
 }
 
-task clean(type: Delete) {
-  delete rootProject.buildDir
+task("clean", Delete::class) {
+  delete = setOf(rootProject.buildDir)
 }

@@ -84,7 +84,7 @@ dependencies {
   implementation(Deps.Android.Arch.Navigation.UI.ktx)
   implementation(Deps.Android.Arch.Navigation.Fragment.ktx)
 
-  testImplementation("junit:junit:4.12")
+  testImplementation(Deps.junit)
   androidTestImplementation("androidx.test:runner:1.1.0-alpha3")
   androidTestImplementation("androidx.test.espresso:espresso-core:3.1.0-alpha3")
 }
